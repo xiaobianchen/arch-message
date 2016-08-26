@@ -11,4 +11,7 @@ public class Constants {
 
     // 目标，在ActiveMQ管理员控制台创建 http://localhost:8161/admin/queues.jsp
     public static final String DESTINATION = "xiaobian.mq.message";
+
+    public static final String NAMESRVADDR="192.168.66.77:9876";
+
 }
