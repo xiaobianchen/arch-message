@@ -1,9 +1,9 @@
 package com.arch.message;
 
 
-import com.arch.message.consumer.impl.ConsumerFactoryImpl;
-import com.arch.message.producer.ProducerFactory;
-import com.arch.message.producer.impl.ProducerFactoryImpl;
+import com.arch.message.activemq.consumer.impl.ConsumerFactoryImpl;
+import com.arch.message.activemq.consumer.producer.ProducerFactory;
+import com.arch.message.activemq.consumer.producer.impl.ProducerFactoryImpl;
 import org.junit.Test;
 
 public class MessageTest {

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="consumerFactory" class="com.arch.message.metaq.consumer.impl.ConsumerFactoryImpl" factory-method="getInstance" />
+
+    <bean id='consumerConfig' class="com.arch.message.metaq.consumer.ConsumerConfig">
+        <property name="maxDelayFetchTimeInMills" value="2000"></property>
+        <property name="threadPoolSize" value="1"></property>
+        <property name="retryCount" value="5"></property>
+    </bean>
+
+    <bean id="demoMessageListener" class="com.arch.message.demo.DemoMessageListener"></bean>
+
+    <bean id="testProducer" factory-bean="consumerFactory" factory-method="createConsumer" init-method="start">
+        <constructor-arg>
+            <!--topic-->
+            <value>meta-test</value>
+        </constructor-arg>
+        <constructor-arg>
+            <!--consumerId-->
+            <value>demo12345</value>
+        </constructor-arg>
+        <constructor-arg>
+            <!--consumer config-->
+            <ref bean="consumerConfig" />
+        </constructor-arg>
+        <constructor-arg>
+            <!--listener-->
+            <ref bean="demoMessageListener" />
+        </constructor-arg>
+    </bean>
+
+</beans>

@@ -37,6 +37,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.taobao.metamorphosis</groupId>
+            <artifactId>metamorphosis-client</artifactId>
+            <version>1.4.6.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba.rocketmq</groupId>
             <artifactId>rocketmq-client</artifactId>
             <version>3.2.6</version>

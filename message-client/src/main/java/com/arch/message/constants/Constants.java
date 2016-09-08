@@ -14,4 +14,6 @@ public class Constants {
 
     public static final String NAMESRVADDR="192.168.66.77:9876";
 
+    public static final String Metaq_Zk_Server_Key="192.168.66.77:2181";
+
 }

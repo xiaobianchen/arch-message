@@ -1,4 +1,4 @@
-package com.arch.message.producer;
+package com.arch.message.activemq.consumer.producer;
 
 import com.arch.message.exception.SendFailedException;
 
